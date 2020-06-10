@@ -1,27 +1,28 @@
 {
-  "name": "sms-application",
-  "version": "1.0.0",
-  "description": "SMS sending app",
-  "main": "index.js",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.3",
-    "express": "^4.17.1",
-    "nexmo": "^2.6.0",
-    "socket.io": "^2.3.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Prafullthakur/SMS-APPLICATION.git"
-  },
-  "author": "Prafull chauhan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Prafullthakur/SMS-APPLICATION/issues"
-  },
-  "homepage": "https://github.com/Prafullthakur/SMS-APPLICATION#readme"
+    "name": "sms-application",
+    "version": "1.0.0",
+    "description": "SMS sending app",
+    "main": "index.js",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "nexmo": "^2.6.0",
+        "socket.io": "^2.3.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "index.js",
+        "dev": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Prafullthakur/SMS-APPLICATION.git"
+    },
+    "author": "Prafull chauhan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Prafullthakur/SMS-APPLICATION/issues"
+    },
+    "homepage": "https://github.com/Prafullthakur/SMS-APPLICATION#readme"
 }
