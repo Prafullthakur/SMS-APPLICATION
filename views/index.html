@@ -11,9 +11,10 @@
 <body>
     <div class="container">
         <h2>Send SMS Message</h2>
-        <input type="tel" name="number" placeholder="Enter Phone Number...">
-        <input type="text" name="msg" placeholder="Enter Your Message...">
+        <input type="tel" id="number" name="number" placeholder="Enter Phone Number...">
+        <input type="text" id="msg" name="msg" placeholder="Enter Your Message...">
         <input type="button" id="button" value="Send Text" class="button button-primary">
+        <p class="response"></p>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>

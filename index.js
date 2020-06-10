@@ -11,6 +11,12 @@ const app = express();
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
 
+// Init Nexmo
+const nexmo = new Nexmo({
+    apiKey: '0eb1c484',
+    apiSecret: 'kWyO22ti6U69GESo'
+}, { debug: true });
+
 // Public folder setup
 app.use(express.static(__dirname + '/public'));
 
@@ -22,6 +28,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.render('index');
 })
+
+//Catch from submit 
+app.post('/', (req, res) => {
+    // res.send(req.body);
+    //  console.log(req.body);
+    const number = req.body.number;
+    const text = req.body.text;
+
+    nexmo.message.sendSms(
+        '919027054342', number, text, { type: 'unicode' },
+        (err, responseData) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.dir(responseData);
+            }
+        }
+    );
+});
 
 // Define port
 const port = 3000;
